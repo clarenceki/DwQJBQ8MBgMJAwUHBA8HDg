@@ -41,7 +41,9 @@ let options = {
     success_attempt: 10 // number of successful rate results to be saved
 };
 ```
+
 2. Run 'npm install' to install all deps locally.
+
 3. Run 'node consumer.js'.
 
 ## How to produce a job
@@ -53,5 +55,7 @@ const host = 'localhost';
 const port = 11300;
 const tube = 'clarenceki';
 ```
+
 2. Run 'node producer.js `FROM` `TO`', `FROM` and `TO` are ISO 4217 currency code.
+
 	e.g.: 'node producer.js HKD USD'
