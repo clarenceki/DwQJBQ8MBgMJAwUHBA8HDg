@@ -12,8 +12,7 @@ let options = {
 	bs_tube: 'clarenceki', // the tube name
 	// the standard MongoDB URL
 	// format : mongodb://<dbuser>:<dbpassword>@<host>:<port>/<database>
-//	mongodb_uri: 'mongodb://dbuser:dbpassword@host:13991/database',
-	mongodb_uri: 'mongodb://DwcNBAwGAwYHDQwJBAwBCA:DwcNBAwGAwYHDQwJBAwBCA@ds013991.mlab.com:13991/my-first-db',
+	mongodb_uri: 'mongodb://dbuser:dbpassword@host:13991/database',
 	mongodb_collection: 'xe_currency', // the collection name on MongoDB
 	failed_delay: 3, // delay in seconds if failed attempt
 	failed_attempt: 3, // allow the number of failed attempt before the job is buried
