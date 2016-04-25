@@ -25,6 +25,7 @@
 ----
 
 1. Open 'consumer.js' and fill in the beanstalk server and MongoDB server settings 
+
 ```
 let options = {
     parallel: 10, // number of tasks running in "parallel"
@@ -50,6 +51,7 @@ let options = {
 ----
 
 1. Open 'producer.js' and fill in the beanstalk server setting
+
 ```
 const host = 'localhost';
 const port = 11300;
