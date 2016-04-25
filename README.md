@@ -2,14 +2,17 @@
 ---
 
 * Get a job from beanstalk server with the following format.
+
 ```
 {
 	'from': 'HKD',
 	'to': 'USD'
 }
 ```
+
 * Get the HTML file from xe.com every 60 seconds
 * Parse the HTML and store the currency rate to MongoDB with the following format.
+
 ```
 {
     "from": "HKD",
@@ -18,13 +21,14 @@
     "rate": "0.13"
 }
 ```
+
 * Save 10 successful rate results to MongoDB, then the job is done
 * Bury the job if more than 3 times in total (not consecutive)
 
 ## How to run consumer worker
 ----
 
-1. Open 'consumer.js' and fill in the beanstalk server and MongoDB server settings 
+1. Open 'consumer.js' and fill in the beanstalk server and MongoDB server settings
 
 ```
 let options = {
@@ -42,7 +46,6 @@ let options = {
     success_attempt: 10 // number of successful rate results to be saved
 };
 ```
-
 2. Run 'npm install' to install all deps locally.
 
 3. Run 'node consumer.js'.
@@ -59,5 +62,4 @@ const tube = 'clarenceki';
 ```
 
 2. Run 'node producer.js `FROM` `TO`', `FROM` and `TO` are ISO 4217 currency code.
-
 	e.g.: 'node producer.js HKD USD'
